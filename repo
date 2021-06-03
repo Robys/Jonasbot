@@ -1,0 +1,19 @@
+    await page.evaluate(()=>{
+        
+        let counter = 0;
+        let array = document.querySelectorAll('L3NKy'); // classe do botão seguir
+
+        array.forEach((value,index) =>{
+            setTimeout(()=>{
+                if(!value.classList.contains('_8A5w5')){
+                    value.click();
+                    counter++;
+                    console.log('Jonas já seguiu' + counter + 'pessoas')
+                }
+                else{
+                    console.log('Jonas já segue esta pessoa')
+                }
+            },10000)
+        })
+
+
